@@ -115,7 +115,7 @@ class AppJunkDetailsViewModel @Inject constructor(
 
     fun requestDelete(spec: DeleteSpec) = launch {
         log(TAG, INFO) { "requestDelete($spec)" }
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }
@@ -126,7 +126,7 @@ class AppJunkDetailsViewModel @Inject constructor(
 
     fun confirmDelete(spec: DeleteSpec) = launch {
         log(TAG, INFO) { "confirmDelete($spec)" }
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }

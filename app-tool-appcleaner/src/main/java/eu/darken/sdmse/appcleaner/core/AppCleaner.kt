@@ -74,7 +74,7 @@ import javax.inject.Singleton
 private val AppCleanerTask.requiresPro: Boolean
     get() = when (this) {
         is AppCleanerScanTask -> false
-        is AppCleanerProcessingTask -> true
+        is AppCleanerProcessingTask -> false
         is AppCleanerSchedulerTask -> true
         is AppCleanerOneClickTask -> true
     }

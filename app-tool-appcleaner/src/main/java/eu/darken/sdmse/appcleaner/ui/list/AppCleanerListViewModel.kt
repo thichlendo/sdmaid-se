@@ -182,7 +182,7 @@ class AppCleanerListViewModel @Inject constructor(
 
     fun onRowClick(row: Row) = launch {
         log(TAG, INFO) { "onRowClick(${row.identifier})" }
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }
@@ -197,7 +197,7 @@ class AppCleanerListViewModel @Inject constructor(
     fun onDeleteSelected(ids: Set<InstallId>) = launch {
         log(TAG, INFO) { "onDeleteSelected(${ids.size})" }
         if (ids.isEmpty()) return@launch
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }
@@ -206,7 +206,7 @@ class AppCleanerListViewModel @Inject constructor(
 
     fun onDeleteConfirmed(ids: Set<InstallId>) = launch {
         log(TAG, INFO) { "onDeleteConfirmed(${ids.size})" }
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }
