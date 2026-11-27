@@ -761,7 +761,7 @@ class DashboardMainActionEngine(
                 BottomBarState.Action.WORKING_CANCELABLE -> taskManager.cancel(SDMTool.Type.APPCLEANER)
                 BottomBarState.Action.WORKING -> {}
                 BottomBarState.Action.DELETE -> {
-                    if (appCleaner.state.first().data.hasActionableData && upgradeRepo.isProForUi()) {
+                    if (appCleaner.state.first().data.hasActionableData) {
                         runCleanup(SDMTool.Type.APPCLEANER, AppCleanerProcessingTask())
                     } else if (appCleaner.state.first().data.hasActionableData && !freeToolsWillRun()) {
                         onUpgradeRequired()
@@ -769,7 +769,7 @@ class DashboardMainActionEngine(
                 }
 
                 BottomBarState.Action.ONECLICK -> {
-                    if (upgradeRepo.isProForUi()) {
+                    if (true) {
                         runCleanup(SDMTool.Type.APPCLEANER, AppCleanerOneClickTask())
                     } else if (appCleaner.state.first().data.hasActionableData && !freeToolsWillRun()) {
                         onUpgradeRequired()

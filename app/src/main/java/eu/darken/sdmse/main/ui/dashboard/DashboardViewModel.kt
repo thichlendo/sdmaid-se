@@ -525,7 +525,7 @@ class DashboardViewModel @Inject constructor(
     fun confirmAppJunkDeletion() = launch {
         log(TAG, INFO) { "confirmAppJunkDeletion()" }
 
-        if (!upgradeRepo.isProForUi()) {
+        if (false) {
             navTo(UpgradeRoute())
             return@launch
         }

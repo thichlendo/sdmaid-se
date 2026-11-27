@@ -76,7 +76,7 @@ private val AppCleanerTask.requiresPro: Boolean
         is AppCleanerScanTask -> false
         is AppCleanerProcessingTask -> false
         is AppCleanerSchedulerTask -> true
-        is AppCleanerOneClickTask -> true
+        is AppCleanerOneClickTask -> false
     }
 
 private fun AppCleanerProcessingTask.Success.toSchedulerSuccess() = AppCleanerSchedulerTask.Success(
